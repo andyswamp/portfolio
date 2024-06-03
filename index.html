@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="css/lightbox.css" rel="stylesheet" />
 </head>
 <body>
     <header>
@@ -13,26 +14,93 @@
     </header>
     <section id="about">
         <h2>About Me</h2>
-        <p>I'm a passionate programmer with experience in Python and creating Discord bots. Currently exploring web development and looking for new opportunities.</p>
+        <p>I'm a passionate and professional programmer with extensive experience in Python and creating Discord bots. I am dedicated to exploring web development and continuously seeking new opportunities to apply my skills and contribute to impactful projects.</p>
     </section>
-    <section id="projects">
-        <h2>My Projects</h2>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
         <div class="project">
-            <h3>Discord Bot</h3>
+            <h3>LRA+ Discord Bot</h3>
             <p>A bot that performs various tasks on Discord servers.</p>
-            <img src="images/bot-screenshot1.png" alt="Bot Screenshot 1">
-            <img src="images/bot-screenshot2.png" alt="Bot Screenshot 2">
+            <div class="details">
+                <ul>
+                    <li><strong>User Interaction & Management:</strong>
+                        <ul>
+                            <li>Role management via interactive buttons.</li>
+                            <li>Automated welcome/farewell messages.</li>
+                            <li>Commands for clearing messages, checking latency, sending messages, and bot restarts.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Reputation & Rewards System:</strong>
+                        <ul>
+                            <li>Automated reputation tracking for user activities.</li>
+                            <li>Daily rewards with random chances.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Games & Entertainment:</strong>
+                        <ul>
+                            <li>Blackjack Game: Betting, scoring, and dealer play.</li>
+                            <li>Lotto Game: Number guessing for reputation rewards.</li>
+                            <li>Flip Coin Event: Randomized coin flips for user engagement.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Music Playback:</strong>
+                        <ul>
+                            <li>Music streaming from YouTube using yt_dlp.</li>
+                            <li>Commands for playing, queuing, pausing, resuming, and stopping music.</li>
+                        </ul>
+                    </li>
+                    <li><strong>AI Integration:</strong>
+                        <ul>
+                            <li>OpenAI GPT-powered AI assistant for user queries.</li>
+                            <li>DALL-E model for image generation.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Statistics & Analytics:</strong>
+                        <ul>
+                            <li>Tracking and displaying various user and server activities.</li>
+                            <li>Regular updates to a dedicated statistics channel.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Shop System:</strong>
+                        <ul>
+                            <li>Purchase roles and customizations using internal currency.</li>
+                            <li>Premium upgrades for high-level users.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Backup & Data Management:</strong>
+                        <ul>
+                            <li>Regular backups of user data to prevent loss.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Cloud Hosting:</strong>
+                        <ul>
+                            <li>Deployed and managed the bot on Google Cloud Platform (GCP).</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="image-gallery">
+                <a href="images/bot-screenshot1.png" data-lightbox="project" data-title="Bot Screenshot 1">
+                    <img src="images/bot-screenshot1.png" alt="Bot Screenshot 1">
+                </a>
+                <a href="images/bot-screenshot2.png" data-lightbox="project" data-title="Bot Screenshot 2">
+                    <img src="images/bot-screenshot2.png" alt="Bot Screenshot 2">
+                </a>
+                <!-- Add more images as needed -->
+            </div>
             <p>More details about the bot and its functionality.</p>
         </div>
+        <!-- Add more projects as needed -->
     </section>
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:email@example.com">email@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/andyswamp">andyswamp</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/andyswamp">andyswamp</a></p>
+        <p>Email: <a href="mailto:andrei.cervinschi@outlook.com">andrei.cervinschi@outlook.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/andrei-cervinschi-83ba041b2/?trk=opento_sprofile_details">Andrei Cervinschi</a></p>
     </section>
     <footer>
-        <p>&copy; 2024 My Name. All rights reserved.</p>
+        <p>&copy; 2024 Cervinschi Andrei. All rights reserved.</p>
     </footer>
+    <script src="js/lightbox-plus-jquery.js"></script>
 </body>
 </html>
+
