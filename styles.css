@@ -23,13 +23,59 @@ section {
 
 h2 {
     color: #4CAF50;
+    margin-bottom: 1em;
+    text-align: left;
 }
 
-.project img {
+.project {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project h3 {
+    margin-top: 0;
+    text-align: left;
+}
+
+.project p,
+.project ul,
+.project li {
+    text-align: left;
+}
+
+.details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.details ul li {
+    margin-bottom: 1em;
+}
+
+.details ul ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.image-gallery a {
+    flex: 1 1 30%;
+    max-width: 30%;
+    box-sizing: border-box;
+}
+
+.image-gallery img {
     width: 100%;
-    max-width: 400px;
-    display: block;
-    margin: 0.5em auto;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 a {
@@ -42,4 +88,13 @@ footer {
     padding: 1em 0;
     background-color: #333;
     color: white;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 0.5em 0;
 }
