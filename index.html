@@ -1,106 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="css/lightbox.css" rel="stylesheet" />
-</head>
-<body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Why Me?</p>
-    </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a passionate and professional programmer with extensive experience in Python and creating Discord bots. I am dedicated to exploring web development and continuously seeking new opportunities to apply my skills and contribute to impactful projects.</p>
-    </section>
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="project">
-            <h3>LRA+ Discord Bot</h3>
-            <p>A bot that performs various tasks on Discord servers.</p>
-            <div class="details">
-                <ul>
-                    <li><strong>User Interaction & Management:</strong>
-                        <ul>
-                            <li>Role management via interactive buttons.</li>
-                            <li>Automated welcome/farewell messages.</li>
-                            <li>Commands for clearing messages, checking latency, sending messages, and bot restarts.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Reputation & Rewards System:</strong>
-                        <ul>
-                            <li>Automated reputation tracking for user activities.</li>
-                            <li>Daily rewards with random chances.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Games & Entertainment:</strong>
-                        <ul>
-                            <li>Blackjack Game: Betting, scoring, and dealer play.</li>
-                            <li>Lotto Game: Number guessing for reputation rewards.</li>
-                            <li>Flip Coin Event: Randomized coin flips for user engagement.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Music Playback:</strong>
-                        <ul>
-                            <li>Music streaming from YouTube using yt_dlp.</li>
-                            <li>Commands for playing, queuing, pausing, resuming, and stopping music.</li>
-                        </ul>
-                    </li>
-                    <li><strong>AI Integration:</strong>
-                        <ul>
-                            <li>OpenAI GPT-powered AI assistant for user queries.</li>
-                            <li>DALL-E model for image generation.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Statistics & Analytics:</strong>
-                        <ul>
-                            <li>Tracking and displaying various user and server activities.</li>
-                            <li>Regular updates to a dedicated statistics channel.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Shop System:</strong>
-                        <ul>
-                            <li>Purchase roles and customizations using internal currency.</li>
-                            <li>Premium upgrades for high-level users.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Backup & Data Management:</strong>
-                        <ul>
-                            <li>Regular backups of user data to prevent loss.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Cloud Hosting:</strong>
-                        <ul>
-                            <li>Deployed and managed the bot on Google Cloud Platform (GCP).</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="image-gallery">
-                <a href="images/bot-screenshot1.png" data-lightbox="project" data-title="Bot Screenshot 1">
-                    <img src="images/bot-screenshot1.png" alt="Bot Screenshot 1">
-                </a>
-                <a href="images/bot-screenshot2.png" data-lightbox="project" data-title="Bot Screenshot 2">
-                    <img src="images/bot-screenshot2.png" alt="Bot Screenshot 2">
-                </a>
-                <!-- Add more images as needed -->
-            </div>
-            <p>More details about the bot and its functionality.</p>
-        </div>
-        <!-- Add more projects as needed -->
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:andrei.cervinschi@outlook.com">andrei.cervinschi@outlook.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/andrei-cervinschi-83ba041b2/?trk=opento_sprofile_details">Andrei Cervinschi</a></p>
-    </section>
-    <footer>
-        <p>&copy; 2024 Cervinschi Andrei. All rights reserved.</p>
-    </footer>
-    <script src="js/lightbox-plus-jquery.js"></script>
-</body>
-</html>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="andyswamp">
+    <title>Andrei Cervinschi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Stil personalizat pentru a mări distanța între secțiuni */
+        #about {
+            margin-bottom: 200px; /* Ajustează valoarea după preferințe */
+        }
+        #projects {
+            margin-bottom: 100px; /* Ajustează valoarea după preferințe */
+        }
+    </style>
+</head>
+
+<body>
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content">
+            <div class="text-overlay">
+                <h1>Hello I'm</h1>
+                <p>Andrei Cervinschi</p>
+            </div>
+        </div>
+        <nav id="main-nav" class="nav-menu">
+            <div class="logo">
+                <a href="#home">
+                    <img src="images/mylogo.png" alt="Logo" class="no-right-click">
+                </a>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">My Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="combined-sections">
+        <section id="about">
+            <div class="about-content">
+                <img src="images/me.png" alt="Andrei Cervinschi" class="no-right-click">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>
+                        I am an innovative and forward-thinking individual, always up-to-date with the latest technologies and deeply passionate about tech. I am diligent, honest, and punctual, with a friendly and polite demeanor. My ability to work independently in busy environments and thrive in team settings is exceptional. I excel under pressure and have a strong passion for understanding complex subjects. Additionally, I am adaptable, quick to learn, and possess strong problem-solving skills.
+                    </p>                                   
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+        
+            <div class="project-container">
+                <div class="project-logo">
+                    <img src="images/LRA+.png" alt="LRA+ Bot">
+                </div>
+                <div class="project-details">
+                    <h3>LRA+</h3>
+                    <p>
+                        I developed a comprehensive Discord bot named LRA+ using the Nextcord library, an improved version of Discord.py, designed to interact with the Discord API. I configured the bot with extensive functionalities including role assignment, a reputation system, invite tracking, games, shops, and image generation using OpenAI’s API. Initially, the bot loads configuration from a file and sets up intents for guilds, message content, presences, and members. It creates a bot instance with a specified command prefix and defines several global dictionaries to manage invites, reputation, diamonds, and last claimed timestamps. Upon starting, the bot loads data from persistent storage, refreshes interactive messages, and sets up periodic tasks for refreshing messages, backing up data, and updating reputation. The bot handles various events such as member updates, invite creation and deletion, member joins, and member removals, updating reputation points and sending appropriate notifications.
+                    </p>
+                    <p>
+                        Role assignment is managed through an interactive view with buttons, enabling users to add or remove specific roles. The bot includes commands for clearing messages, checking its latency, sending messages to specific channels, rebooting, adding reputation manually, and saving reputation data. I implemented a detailed reputation and ranking system, allowing for automated reputation updates based on voice channel activity and periodic checks for rank advancements. The bot features multiple games, including a coin flip game, a daily lottery, and a blackjack game with detailed handling of game states, betting, and result processing. Shops are implemented where users can buy roles and custom colors using reputation points, trade diamonds for reputation, and purchase premium roles using diamonds.
+                    </p>
+                    <p>
+                        The bot also integrates OpenAI's API for generating images based on user prompts, with reputation points deducted for each generation. Additionally, the bot provides detailed statistics on various activities, including games, daily claims, shop transactions, and AI interactions, updating a designated message periodically with the latest stats. Backup tasks ensure data is regularly saved, and a music playback feature allows users to play, pause, resume, skip, and stop music in voice channels. The bot’s error handling ensures smooth operation, notifying users of issues and providing a user-friendly experience across its multiple functionalities. I efficiently managed the testing and debugging processes, ensuring that the bot now operates smoothly without any bugs or errors. Additionally, I was responsible for creating and hosting the bot using a virtual machine running Ubuntu in Google Cloud.                    </p>
+                    <div class="technologies-used">
+                        <img src="images/python-logo.png" alt="Python" title="Python">
+                        <img src="images/discord-logo.png" alt="Discord" title="Discord">
+                        <img src="images/openai-logo.png" alt="OpenAI" title="OpenAI">
+                        <img src="images/google-cloud-logo.png" alt="Google Cloud" title="Google Cloud">
+                        <img src="images/pycharm-logo.png" alt="PyCharm" title="PyCharm">
+                        <!-- Adăugați alte logo-uri necesare -->
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-container">
+                <div class="project-logo">
+                    <img src="images/web-designer.png" alt="Image Manipulation">
+                </div>
+                <div class="project-details">
+                    <h3>Web Design and Image Production</h3>
+                    <p>
+                        As a web designer and image production, I have developed a diverse skill set that includes creating and editing images using tools like Photoshop, DALL-E 3, and Leonardo.ai. My work spans various needs, including crafting stunning visuals for Instagram, generating custom images for web projects, and enhancing user interfaces for optimal user experiences. My expertise in image manipulation allows me to create high-quality, engaging content that meets the specific requirements of each project.
+                    </p>
+                    <p>
+                        Utilizing advanced AI tools such as DALL-E 3 and Leonardo.ai, I have mastered the art of generating unique images that cater to both aesthetic and functional needs. Whether it's producing illustrations for social media, developing graphic elements for websites, or creating personalized artwork, my work stands out for its creativity and precision. My proficiency in Photoshop further enhances my ability to refine and perfect images, ensuring that each piece is polished and professional.
+                    </p>
+                     <p>
+                        In addition to my image production capabilities, my web design skills are instrumental in building visually appealing and user-friendly websites. I have a strong command of HTML, CSS, and JavaScript, which allows me to design responsive and interactive web pages. My experience with tools like Visual Studio Code and platforms like GitHub ensures efficient development workflows and seamless project collaboration. 
+                    </p>
+                    <p>
+                        My dedication to staying current with the latest technological trends ensures that I bring innovative solutions to every project. From concept to execution, I am committed to delivering high-quality work that exceeds client expectations and contributes to their success.
+                    </p>
+                    <div class="technologies-used">
+                        <img src="images/photoshop-logo.png" alt="Photoshop" title="Photoshop">
+                        <img src="images/leonardo-logo.png" alt="Leonardo AI" title="Leonardo AI">
+                        <img src="images/midjourney-logo.png" alt="Midjourney" title="Midjourney">
+                        <img src="images/visualstudiocode-logo.png" alt="Visual Studio Code" title="Visual Studio Code">
+                        <img src="images/html-logo.png" alt="HTML 5" title="HTML 5">
+                        <img src="images/github-logo.png" alt="GitHub" title="GitHub">
+
+                        <!-- Adăugați alte logo-uri necesare -->
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-container">
+                <div class="project-logo">
+                    <img src="images/ai-ml.png" alt="AI Machine Learning">
+                </div>
+                <div class="project-details">
+                    <h3>Machine Learning Real Estate Project</h3>
+                    <p>I am currently working on a project aimed at enhancing real estate operations through artificial intelligence. The primary focus is on developing data collection bots to gather extensive datasets necessary for model training. These datasets will be used to train machine learning algorithms using TensorFlow and PyTorch libraries. The project aims to leverage advanced machine learning techniques to provide insights and predictions in the real estate market, ultimately improving decision-making and operational efficiency.</p>
+                    <div class="technologies-used">
+                        <img src="images/python-logo.png" alt="Python" title="Python">
+                        <img src="images/tensor-logo.png" alt="TensorFlow" title="TensorFlow">
+                        <img src="images/pytorch-logo.png" alt="PyTorch" title="PyTorch">
+                        <!-- Adăugați alte logo-uri necesare -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>If you have any questions, feel free to reach out to me through any of the social media platforms below.
+            </p>
+            <div class="social-icons">
+                <a href="mailto:andrei.cervinschi@outlook.com" target="_blank" class="social-icon">
+                    <img src="images/mail-icon.png" alt="Mail" class="no-right-click">
+                </a>
+                <a href="https://www.linkedin.com/in/andrei-cervinschi-83ba041b2/" target="_blank" class="social-icon">
+                    <img src="images/linkedin-icon.png" alt="LinkedIn" class="no-right-click">
+                </a>
+                <a href="https://www.facebook.com/andy.sv3/" target="_blank" class="social-icon">
+                    <img src="images/facebook-icon.png" alt="Facebook" class="no-right-click">
+                </a>
+                <a href="https://www.instagram.com/andy_andrei3/" target="_blank" class="social-icon">
+                    <img src="images/instagram-icon.png" alt="Instagram" class="no-right-click">
+                </a>
+                <a href="https://x.com/andyswamp" target="_blank" class="social-icon">
+                    <img src="images/twitter-icon.png" alt="Twitter" class="no-right-click">
+                </a>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Andrei Cervinschi. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menu = document.getElementById('main-nav');
+
+            function checkScroll() {
+                if (window.scrollY > 50) {
+                    menu.classList.add('scrolled');
+                } else {
+                    menu.classList.remove('scrolled');
+                }
+            }
+
+            window.addEventListener('scroll', checkScroll);
+
+            // Initial check
+            checkScroll();
+        });
+    </script>
+</body>
+
+</html>
