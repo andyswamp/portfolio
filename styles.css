@@ -188,6 +188,7 @@ section {
 /* PROIECTE */
 
 #projects h2 {
+    max-width: auto; /* Ajustează dimensiunea textului */
     text-align: left; /* Aliniază textul la stânga */
     padding-left: 670px; /* Ajustează padding-ul pentru a muta mai la stânga */
 }
@@ -243,17 +244,49 @@ section {
 }
 
 /* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     #projects h2 {
-        text-align: center;
-        padding-left: 0; /* Ajustează padding-ul pentru a centra titlul */
+        padding-left: 500px; /* Ajustează padding-ul pentru ecrane mai mici */
     }
-
-    .project-details {
-        text-align: center; /* Centrează textul pentru ecrane mai mici */
+    .project-container:nth-child(odd),
+    .project-container:nth-child(even) {
+        margin-left: 200px; /* Ajustează margin-ul pentru ecrane mai mici */
     }
 }
 
+@media (max-width: 992px) {
+    #projects h2 {
+        padding-left: 300px; /* Ajustează padding-ul pentru ecrane mai mici */
+    }
+    .project-container:nth-child(odd),
+    .project-container:nth-child(even) {
+        margin-left: 100px; /* Ajustează margin-ul pentru ecrane mai mici */
+    }
+}
+
+@media (max-width: 768px) {
+    #projects h2 {
+        padding-left: 0; /* Centrăm titlul pe ecrane mici */
+        text-align: center; /* Centrăm textul */
+    }
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 2em auto;
+    }
+    .project-container:nth-child(odd),
+    .project-container:nth-child(even) {
+        margin-left: 0; /* Eliminăm margin-ul pentru ecrane mici */
+    }
+    .project-logo img {
+        max-width: 100%; /* Asigurăm că imaginea logo-ului se ajustează pentru ecrane mici */
+        height: auto;
+    }
+    .project-details {
+        text-align: center;
+        max-width: 100%; /* Ajustăm lățimea detaliilor proiectului pentru ecrane mici */
+    }
+}
 
 
 /* Contact section styles */
