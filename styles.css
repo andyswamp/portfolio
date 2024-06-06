@@ -288,6 +288,24 @@ section {
     }
 }
 
+/* Specific adjustments for very small screens (e.g., mobile) */
+@media (max-width: 576px) {
+    .project-logo img {
+        max-width: 90%; /* Ajustăm dimensiunea logo-ului pentru ecrane foarte mici */
+        margin-right: 0; /* Eliminăm spațierea dreapta */
+    }
+    .project-details {
+        text-align: center; /* Centrăm textul */
+        max-width: 90%; /* Ajustăm lățimea detaliilor proiectului pentru ecrane foarte mici */
+    }
+    .technologies-used {
+        flex-wrap: wrap; /* Permitem împachetarea logo-urilor tehnologiilor */
+        justify-content: center; /* Centrăm logo-urile tehnologiilor */
+    }
+    .technologies-used img {
+        margin-bottom: 10px; /* Adăugăm spațiere verticală între logo-uri */
+    }
+}
 
 /* Contact section styles */
 #contact {
