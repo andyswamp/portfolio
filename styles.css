@@ -306,18 +306,16 @@ section {
     }
     .project-container:nth-child(odd),
     .project-container:nth-child(even) {
-        margin-left: 0; /* Eliminăm margin-ul pentru ecrane mici */
+        margin-left: 0 !important; /* Eliminăm margin-ul pentru ecrane mici */
     }
-    .project-logo img {
-        max-width: 100%; /* Asigurăm că imaginea logo-ului se ajustează pentru ecrane mici */
-        height: auto;
+    .project-logo {
+        display: none !important; /* Ascunde logo-urile pe ecrane mici */
     }
     .project-details {
-        text-align: center;
-        max-width: 100%; /* Ajustăm lățimea detaliilor proiectului pentru ecrane mici */
+        text-align: center !important;
+        max-width: 100% !important; /* Ajustăm lățimea detaliilor proiectului pentru ecrane mici */
     }
 }
-
 
 /* Contact section styles */
 #contact {
@@ -407,5 +405,16 @@ footer {
 
 .visible .header-image {
     display: block;
+}
+
+
+@keyframes flicker {
+    0% { opacity: 0.9; }
+    50% { opacity: 0.4; }
+    100% { opacity: 0.9; }
+}
+
+.flicker {
+    animation: flicker 0.15s infinite;
 }
 
