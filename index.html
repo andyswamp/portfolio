@@ -44,6 +44,16 @@
         .header-content.visible {
             opacity: 1;
         }
+
+        @keyframes flicker {
+            0% { opacity: 0.9; }
+            50% { opacity: 0.4; }
+            100% { opacity: 0.9; }
+        }
+
+        .flicker {
+            animation: flicker 0.15s infinite;
+        }
     </style>
 </head>
 
@@ -191,11 +201,20 @@
 
     <script>
         window.onload = function() {
-            setTimeout(function() {
-                document.querySelector('.header-image').classList.add('visible');
-                document.querySelector('.header-content').classList.add('visible');
-            }, 2000); // Timpul de așteptare înainte de a face elementele vizibile
-        };
+    setTimeout(function() {
+        const headerImage = document.querySelector('.header-image');
+        const headerContent = document.querySelector('.header-content');
+        
+        headerImage.classList.add('visible');
+        headerContent.classList.add('visible');
+        
+        headerImage.classList.add('flicker');
+        setTimeout(function() {
+            headerImage.classList.remove('flicker');
+        }, 250); // Durata efectului de palpitare
+    }, 2000); // Timpul de așteptare înainte de a face elementele vizibile
+};
+
     </script>
     
 
