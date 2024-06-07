@@ -11,15 +11,15 @@ body {
 .header {
     position: relative;
     height: 100vh;
-    background: url('images/header.png') no-repeat center center/cover;
-    background-size: cover;
-    background-position: center top; /* Ajustează valoarea pentru a tăia mai mult din partea de sus */
+    background: #000; /* Set a default background color initially */
     text-align: center;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Hide overflowing content */
 }
+
 
 .overlay {
     position: absolute;
@@ -39,7 +39,34 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    opacity: 0.1; /* Initial low opacity for the text */
+    transition: opacity 2s ease-in-out; /* Smooth transition for the text */
 }
+
+.header-content.visible {
+    opacity: 1; /* Fully visible text */
+}
+
+.header-image {
+    display: none; /* Hide the image initially */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/header.png') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center top; /* Ajustează valoarea pentru a tăia mai mult din partea de sus */
+    z-index: 1; /* Ensure the image is behind the text */
+    opacity: 0; /* Initial opacity set to 0 */
+    transition: opacity 2s ease-in-out; /* Smooth transition for the image */
+}
+
+.header-image.visible {
+    display: block;
+    opacity: 1; /* Fully visible image */
+}
+
 
 .text-overlay {
     position: absolute;
@@ -191,16 +218,19 @@ section {
     max-width: auto; /* Ajustează dimensiunea textului */
     text-align: left; /* Aliniază textul la stânga */
     padding-left: 670px; /* Ajustează padding-ul pentru a muta mai la stânga */
+    margin-bottom: 0; /* Elimină spațiul de sub titlu */
 }
 
+.project-container:first-of-type {
+    margin-top: 0; /* Elimină spațiul de deasupra primului proiect */
+}
 
 .project-container {
     display: flex;
     align-items: center;
-    margin: 2em auto;
+    margin: 10em ;
     max-width: 1000px; /* Ajustează lățimea maximă după preferințe */
-    margin-bottom: 20em; /* Adaugă mai mult spațiu între proiecte */
-
+    margin-bottom: 2em; /* Adaugă mai mult spațiu între proiecte */
 }
 
 .project-container:nth-child(odd) {
@@ -288,24 +318,6 @@ section {
     }
 }
 
-/* Specific adjustments for very small screens (e.g., mobile) */
-@media (max-width: 576px) {
-    .project-logo img {
-        max-width: 90%; /* Ajustăm dimensiunea logo-ului pentru ecrane foarte mici */
-        margin-right: 0; /* Eliminăm spațierea dreapta */
-    }
-    .project-details {
-        text-align: center; /* Centrăm textul */
-        max-width: 90%; /* Ajustăm lățimea detaliilor proiectului pentru ecrane foarte mici */
-    }
-    .technologies-used {
-        flex-wrap: wrap; /* Permitem împachetarea logo-urilor tehnologiilor */
-        justify-content: center; /* Centrăm logo-urile tehnologiilor */
-    }
-    .technologies-used img {
-        margin-bottom: 10px; /* Adăugăm spațiere verticală între logo-uri */
-    }
-}
 
 /* Contact section styles */
 #contact {
@@ -367,3 +379,33 @@ footer {
     background-color: #333;
     color: #fff;
 }
+
+
+/* Stil personalizat pentru a mări distanța între secțiuni */
+#about {
+    margin-bottom: 200px; /* Ajustează valoarea după preferințe */
+}
+
+#projects {
+    margin-bottom: 0px; /* Ajustează valoarea după preferințe */
+}
+
+/* Inițial ascunde imaginea și face textul aproape invizibil */
+.header-content {
+    opacity: 0.1;
+    transition: opacity 1s ease-in-out;
+}
+
+.header-image {
+    display: none;
+}
+
+/* Stil pentru a face textul și imaginea vizibile */
+.visible .header-content {
+    opacity: 1;
+}
+
+.visible .header-image {
+    display: block;
+}
+
