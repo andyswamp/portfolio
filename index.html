@@ -13,14 +13,43 @@
             margin-bottom: 200px; /* Ajustează valoarea după preferințe */
         }
         #projects {
-            margin-bottom: 100px; /* Ajustează valoarea după preferințe */
+            margin-bottom: 0px; /* Ajustează valoarea după preferințe */
+        }
+        /* Inițial ascunde imaginea și face textul aproape invizibil */
+        .header-content {
+            opacity: 0.1;
+            transition: opacity 2s ease-in-out; /* Tranziție pentru text */
+        }
+
+        .header-image {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/header.png') no-repeat center center/cover;
+            background-size: cover;
+            background-position: center top; /* Ajustează valoarea pentru a tăia mai mult din partea de sus */
+            z-index: 1; /* Ensure the image is behind the text */
+            opacity: 0; /* Initial opacity set to 0 */
+            transition: opacity 2s ease-in-out; /* Smooth transition for the image */
+        }
+
+        .header-image.visible {
+            display: block;
+            opacity: 1; /* Fully visible image */
+        }
+
+        .header-content.visible {
+            opacity: 1;
         }
     </style>
 </head>
 
 <body>
     <header id="home" class="header">
-        <div class="overlay"></div>
+        <div class="overlay header-image"></div>
         <div class="header-content">
             <div class="text-overlay">
                 <h1>Hello I'm</h1>
@@ -159,6 +188,16 @@
     <footer>
         <p>&copy; 2024 Andrei Cervinschi. All rights reserved.</p>
     </footer>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.querySelector('.header-image').classList.add('visible');
+                document.querySelector('.header-content').classList.add('visible');
+            }, 2000); // Timpul de așteptare înainte de a face elementele vizibile
+        };
+    </script>
+    
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
